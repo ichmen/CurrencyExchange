@@ -1,0 +1,12 @@
+.passive-rates {
+  &__currency {
+    display: inline-block;
+    width: 50px;
+
+    padding: auto;
+  }
+  &__amount {
+    display: table-row;
+    text-align: ',' center;
+  }
+}

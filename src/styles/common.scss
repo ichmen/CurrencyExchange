@@ -1,0 +1,13 @@
+button {
+  text-transform: uppercase;
+}
+input[type='number'] {
+  width: 100px;
+}
+
+.container {
+  width: 100%;
+  @include for-large-up {
+    width: 500px;
+  }
+}

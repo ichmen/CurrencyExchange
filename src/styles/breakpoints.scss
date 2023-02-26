@@ -1,0 +1,12 @@
+$lg: 400px;
+
+@mixin for-large-up {
+  @media screen and (min-width: $lg) {
+    @content;
+  }
+}
+@mixin for-large-down {
+  @media screen and (max-width: ($lg - 1px)) {
+    @content;
+  }
+}

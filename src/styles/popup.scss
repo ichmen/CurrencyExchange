@@ -1,0 +1,29 @@
+.popup-window {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #cccccc45;
+  z-index: 10;
+  margin: auto;
+  &__dialog-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: auto;
+    padding: 20px;
+    background-color: pink;
+  }
+  &__button {
+    height: 30px;
+  }
+  &__title {
+    margin: 0;
+  }
+}
