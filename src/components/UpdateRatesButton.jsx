@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import classNames from 'classnames';
 
 export default function UpdateRatesButton({ updateRates }) {
   const [isDisabled, setDisabled] = useState(false);
@@ -10,7 +11,11 @@ export default function UpdateRatesButton({ updateRates }) {
     }, 5000);
   }
   return (
-    <button className="updateButton" disabled={isDisabled} onClick={() => clickHandler()}>
+    <button
+      className={classNames({ disabled: isDisabled })}
+      disabled={isDisabled}
+      onClick={() => clickHandler()}
+    >
       update
     </button>
   );

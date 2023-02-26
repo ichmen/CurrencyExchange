@@ -25,7 +25,7 @@ export default function App() {
   return (
     <RatesContext.Provider value={state.rates}>
       <div className="container">
-        <h3>Currency exchange rates</h3>
+        <h3 className="container__title">Currency exchange rates</h3>
         <div>
           <ActiveExchange />
           <PassiveContainer />

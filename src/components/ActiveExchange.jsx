@@ -11,6 +11,8 @@ const initialState = {
   secondaryAmount: 0,
 };
 
+const maxSecondaryAmount = 10000;
+
 export default function ActiveExchange() {
   const [state, setState] = useReducer(
     (state, newState) => ({ ...state, ...newState }),
@@ -29,6 +31,10 @@ export default function ActiveExchange() {
     });
   }
   function handleSecondaryAmount(amount) {
+    if (currencyCalculator(state.secondaryCurrency, 'USD', amount, rates) > maxSecondaryAmount) {
+      console.log(state);
+      amount = currencyCalculator('USD', state.secondaryCurrency, maxSecondaryAmount, rates);
+    }
     setState({
       secondaryAmount: amount,
       mainAmount: currencyCalculator(state.secondaryCurrency, state.mainCurrency, amount, rates),
@@ -68,7 +74,7 @@ export default function ActiveExchange() {
         value={state.mainAmount}
         type="number"
         min={0}
-        max={10000}
+        max={1000000}
         onChange={e => handleMainAmount(e.target.value)}
       ></input>
 
@@ -87,7 +93,7 @@ export default function ActiveExchange() {
         value={state.secondaryAmount}
         type="number"
         min={0}
-        max={10000}
+        max={1000000}
         onChange={e => handleSecondaryAmount(e.target.value)}
       ></input>
     </div>

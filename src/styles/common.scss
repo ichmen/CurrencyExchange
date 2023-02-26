@@ -1,13 +1,33 @@
 button {
   text-transform: uppercase;
+  color: white;
+  background-color: blue;
+  border-radius: 4px;
+  border: none;
+  margin: 0 4px;
+  cursor: pointer;
 }
-input[type='number'] {
-  width: 100px;
+.disabled {
+  color: gray;
 }
 
+#root {
+  min-width: 311px;
+  @include for-large-up {
+    display: flex;
+    justify-content: center;
+
+    // border-bottom: solid pink;
+  }
+}
 .container {
   width: 100%;
   @include for-large-up {
     width: 500px;
+    border: 8px solid pink;
+    border-radius: 12px;
+    &__title {
+      text-align: center;
+    }
   }
 }

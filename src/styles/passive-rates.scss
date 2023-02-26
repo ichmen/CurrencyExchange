@@ -6,7 +6,12 @@
     padding: auto;
   }
   &__amount {
+    width: 110px;
     display: table-row;
-    text-align: ',' center;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
   }
 }
