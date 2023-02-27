@@ -1,7 +1,6 @@
   <html>
     <h1>Currency exchange</h2>
-    <h3><a href="#" target="_blank">Project Netify link </a></h3>
-
+   
   <h3>  Available Scripts </h3>
 
 In the project directory, you can run:
@@ -21,9 +20,7 @@ It correctly bundles React in production mode and optimizes the build for the be
       <li>BEM</li>
       <li>JS</li>
       <li>React</li>
-      <li>Redux</li>
-      <li>React-router</li>
     </ul>
     <h3>Author</h3>
-     <a href='https://linkedin.com/in/volodymyr-kolosov-b4889438' target="_blank"><li> V.Kolosov 2022 </li></a>
+     <a href='https://linkedin.com/in/volodymyr-kolosov-b4889438' target="_blank"><li> V.Kolosov 2023 </li></a>
   </html>
