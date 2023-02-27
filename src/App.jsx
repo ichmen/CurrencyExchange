@@ -26,12 +26,12 @@ export default function App() {
     <RatesContext.Provider value={state.rates}>
       <div className="container">
         <h3 className="container__title">Currency exchange rates</h3>
-        <div>
-          <ActiveExchange />
-          <PassiveContainer />
+        <ActiveExchange />
+        <PassiveContainer />
+        <div className="buttons-container">
+          <UpdateRatesButton updateRates={updateRates} />
+          <AddCurrenciesButton toggleVisibility={setState} />
         </div>
-        <UpdateRatesButton updateRates={updateRates} />
-        <AddCurrenciesButton toggleVisibility={setState} />
         <PopUp className="popup-window" isVisible={state.isVisible} toggleVisibility={setState} />
       </div>
     </RatesContext.Provider>

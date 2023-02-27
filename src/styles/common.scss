@@ -12,22 +12,22 @@ button {
 }
 
 #root {
-  min-width: 311px;
+  min-width: 314px;
   @include for-large-up {
     display: flex;
     justify-content: center;
 
-    // border-bottom: solid pink;
   }
 }
 .container {
   width: 100%;
+  &__title {
+    text-align: center;
+  }
   @include for-large-up {
-    width: 500px;
+    width: $lg;
     border: 8px solid pink;
     border-radius: 12px;
-    &__title {
-      text-align: center;
-    }
+    
   }
 }
